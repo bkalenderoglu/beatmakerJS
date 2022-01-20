@@ -114,6 +114,10 @@ select {
   text-align: center;
 }
 
+.mute.active {
+  background: rgb(172, 170, 170);
+}
+
 @keyframes playTrack {
   from {
     transform: scale(1);
