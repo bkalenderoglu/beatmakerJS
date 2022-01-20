@@ -6,12 +6,65 @@
 
 body {
   font-family: sans-serif;
+  background-color: rgb(70, 68, 68);
+  color: white;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
 i,
 svg {
   pointer-events: none;
+}
+
+.sequencer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+}
+
+.kick-track,
+.snare-track {
+  margin-bottom: 5rem;
+}
+
+.controls {
+  display: flex;
+  width: 25rem;
+  margin-right: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: rgb(88, 88, 88);
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.pad {
+  transition: all 0.5s ease;
 }
 
 .kick-pad,
@@ -23,88 +76,32 @@ svg {
   cursor: pointer;
 }
 
-.kick-pad {
-  background: rgb(160, 211, 224);
-}
-
-.snare-pad {
-  background: rgb(241, 143, 245);
-}
-
+.kick-pad,
+.snare-pad,
 .hihat-pad {
-  background: rgb(240, 180, 89);
+  background: rgb(217, 220, 221);
 }
 
 .kick-pad.active {
-  background: rgb(57, 194, 228);
+  background: rgb(108, 57, 228);
 }
 
 .snare-pad.active {
-  background: rgb(238, 54, 245);
+  background: rgb(245, 54, 54);
 }
 
 .hihat-pad.active {
   background: rgb(240, 150, 17);
 }
 
-.sequencer {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hihat-track,
-.snare-track,
-.kick-track {
-  display: flex;
-  align-items: center;
-  width: 70%;
-  justify-content: space-between;
-}
-
-.hihat-track,
-.snare-track {
-  margin-top: 5rem;
-}
-
-.kick,
-.snare,
-.hihat {
-  display: flex;
-}
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
-  margin: 0rem 2rem;
-}
-
-.controls button {
-  padding: 1rem;
-  border: none;
-  background: rgb(88, 88, 88);
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.pad {
-  transition: all 0.5s ease;
-}
-
 .play {
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   background: rgb(88, 88, 88);
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 select {
@@ -112,21 +109,22 @@ select {
   font-size: 1rem;
   width: 12rem;
   text-align: center;
+  color: #fff;
+  background: rgb(95, 92, 92);
 }
 
 .mute.active {
-  background: rgb(172, 170, 170);
+  background: rgb(240, 17, 17);
 }
 
 .tempo {
-  margin: 3rem;
+  margin: 1.5rem;
   width: 30%;
 }
 
 .tempo-slider {
   padding: 0.2rem;
   -webkit-appearance: none;
-  margin: 1rem 0rem;
   width: 100%;
   position: relative;
   background: rgb(88, 88, 88);
@@ -136,7 +134,6 @@ select {
 
 .tempo p {
   font-size: 1.5rem;
-  margin: 2rem;
   text-align: center;
 }
 
